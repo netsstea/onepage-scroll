@@ -92,3 +92,24 @@ body, .onepage-wrapper, html {
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
 }
+.product_box {
+float: left;
+text-align: center;
+margin: 0 10px 10px 0;
+background: url(images/templatemo_h2.png) repeat;
+}
+.product_box .add_to_cart {
+clear: both;
+width: 165px;
+height: 28px;
+margin-left: 60px;
+background: url(images/addtocart.png) no-repeat;
+}
+.product_box .add_to_cart a {
+float: left;
+display: block;
+width: 82px;
+line-height: 28px;
+text-align: center;
+color: #333;
+}
