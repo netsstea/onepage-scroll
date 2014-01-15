@@ -125,6 +125,17 @@
       if (typeof settings.beforeMove == 'function') settings.beforeMove( current.data("index"));
       current.removeClass("active")
       next.addClass("active");
+      console.log(current);
+      //new define
+      /*
+      if(current.data("index") == '' || current.data("index") == 3)
+          $(".back").html("Mooc");
+      if(current.data("index") == 1)
+          $(".back").html("Personlization");
+      if(current.data("index") == 2)
+          $(".back").html("Fkfkfkfkfkfk");
+          */
+      //end
       if(settings.pagination == true) {
         $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
         $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
@@ -142,10 +153,11 @@
     
     $.fn.moveUp = function() {
       var el = $(this)
+      console.log($(settings.sectionContainer +".active"));
       index = $(settings.sectionContainer +".active").data("index");
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
+      console.log(current);
       next = $(settings.sectionContainer + "[data-index='" + (index - 1) + "']");
-      
       if(next.length < 1) {
         if (settings.loop == true) {
           pos = ((total - 1) * 100) * -1;
@@ -160,6 +172,16 @@
       if (typeof settings.beforeMove == 'function') settings.beforeMove(current.data("index"));
       current.removeClass("active")
       next.addClass("active")
+      //Setting for new define
+      /*
+      if(current.data("index") == '' || current.data("index") == 3)
+          $(".back").html("Mooc");
+      if(current.data("index") == 1)
+          $(".back").html("Personlization");
+      if(current.data("index") == 2)
+          $(".back").html("Fkfkfkfkfkfk");
+          */
+      //end
       if(settings.pagination == true) {
         $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
         $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
@@ -178,6 +200,7 @@
       current = $(settings.sectionContainer + ".active")
       next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
       if(next.length > 0) {
+        if (typeof settings.beforeMove == 'function') settings.beforeMove(current.data("index"));
         current.removeClass("active")
         next.addClass("active")
         $(".onepage-pagination li a" + ".active").removeClass("active");
@@ -246,9 +269,14 @@
         top: topPos + "%"
       }).addClass("section").attr("data-index", i+1);
       topPos = topPos + 100;
+      page = ".page"+(i+1);
+      title = $(page).attr('data-title');
       if(settings.pagination == true) {
-        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
+        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'>" +
+                            "<span class='hover-text'>"+title+"</span></a>"
+        		          "</li>"
       }
+      $(".onepage-pagination").find(".hover-text").css("top",topPos);
     });
     
     el.swipeEvents().bind("swipeDown",  function(event){ 

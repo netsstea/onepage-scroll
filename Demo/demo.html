@@ -200,11 +200,10 @@
     
     .back {
       position: absolute;
-      top: 0;
-      left: 0;
-      text-align: center;
       display: block;
       padding: 7px;
+      top: 0;
+      left: 0;
       width: 100%;
       box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -370,13 +369,34 @@
       margin-right: auto;
       right: 0;
     }
+    .onepage-pagination li a .hover-text {
+		position: absolute;
+		right: 12px;
+		padding-right: 13px;
+		width: 50px;
+		opacity: 0;
+		font-size: 0.7em;
+		color: #aaa;
+		text-align: right;
+		-webkit-transition: opacity 0.3s;
+		-moz-transition: opacity 0.3s;
+		transition: opacity 0.3s;
+	}
+	.onepage-pagination li a:hover .hover-text {
+		opacity: 1;
+	}
+	.onepage-pagination li a{
+		cursor: pointer;
+	}
 	</style>
 	<script>
 	  $(document).ready(function(){
-      $(".main").onepage_scroll({
-        sectionContainer: "section",
-        responsiveFallback: 600
-      });
+	      $(".main").onepage_scroll({
+	        sectionContainer: "section",
+	        responsiveFallback: 500,
+            pagination: true,
+            loop: true,
+	      });
 		});
 		
 	</script>
@@ -385,7 +405,7 @@
   <div class="wrapper">
 	  <div class="main">
 	    
-      <section class="page1">
+      <section class="page1" data-title = "Mooc">
         <div class="page_container">
           <h1>One Page Scroll</h1>
           <h2>Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin</h2>
@@ -397,7 +417,7 @@
   	    <img src="phones.png" alt="phones">
       </section>
 	    
-	    <section class="page2">
+	    <section class="page2" data-title = "Personalization">
 	      <div class="page_container">
           <h1>Ready-to-use plugin</h1>
           <h2>All you need is an HTML markup, call the script and BAM!</h2>
@@ -414,7 +434,7 @@
 	      </div>
       </section>
 	    
-	    <section class="page3">
+	    <section class="page3" data-title = "who are we?">
 	      <div class="page_container">
           <h1>Pretty Neat Eh?</h1>
           <h2>You can customise the animation timing, the selector or even the animation easing using CSS3. I can't wait to see what you guys will come up with. Don't forget to grab them for free on Github'</h2>
@@ -423,8 +443,18 @@
   	      </div>
   	    </div>
       </section>
+      
+      <section class="page4" data-title = "Feedback?">
+          <div class="page_container">
+          <h1>Pretty Neat Eh?</h1>
+          <h2>You can customise the animation timing, the selector or even the animation easing using CSS3. I can't wait to see what you guys will come up with. Don't forget to grab them for free on Github'</h2>
+          <div class="btns">
+            <a class="reload btn" href="https://github.com/peachananr/onepage-scroll">Download on Github</a>
+          </div>
+        </div>
+      </section>
     </div>
-    <a class="back" href="http://www.thepetedesign.com/#design">Back to The Pete Design</a>
+    <a class="back">Mooc</a>
     <a href="https://github.com/peachananr/onepage-scroll"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   </div>
 </body>
