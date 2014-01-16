@@ -107,9 +107,12 @@
     }
     
     $.fn.moveDown = function() {
+        console.log('moveDown');
       var el = $(this)
+      console.log(el);
       index = $(settings.sectionContainer +".active").data("index");
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
+      console.log(current);
       next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
       if(next.length < 1) {
         if (settings.loop == true) {
@@ -152,8 +155,9 @@
     }
     
     $.fn.moveUp = function() {
-      var el = $(this)
-      console.log($(settings.sectionContainer +".active"));
+        console.log('moveUp');
+      var el = $(this);
+      console.log(el);
       index = $(settings.sectionContainer +".active").data("index");
       current = $(settings.sectionContainer + "[data-index='" + index + "']");
       console.log(current);

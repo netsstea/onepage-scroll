@@ -235,6 +235,13 @@
       max-width: 950px;
       z-index: 3;
     }
+    .main section .page_container_p2 {
+      position: relative;
+      color: black;
+      margin: 0 auto 0;
+      max-width: 950px;
+      z-index: 3;
+    }
     .main section  {
       overflow: hidden;
     }
@@ -271,7 +278,12 @@
       text-align: center;
     }
     .main section.page2 {
-      background: #555557 url(back-phone.png) no-repeat center -150px ;
+      background: url(images/number_border.jpg) no-repeat; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  position : absolute;
     }
     .main section.page2 > img {
       position: absolute;
@@ -301,7 +313,9 @@
       color: #FFF;
       }
     .main section.page3 {
-      background:url(tilted-phone.png) no-repeat 156px -150px ;
+      background:url(images/education-pencil-hands-on-study-education-backgrounds-powerpoint.jpg) 
+                    no-repeat 180px -150px ;
+      background-color:rgb(208,208,208);
     }
     .main section.page3 .page_container {
       overflow: hidden;
@@ -323,7 +337,11 @@
       font-weight: 100;
       font-size: 21px;
     }
-    
+    .main section.page4 {
+      background:url(images/weGoodtxt.gif) 
+                    no-repeat ;
+      background-color:rgb(208,208,208);
+    }
     body.disabled-onepage-scroll .onepage-wrapper  section {
       min-height: 100%;
       height: auto;
@@ -389,6 +407,39 @@
 	.onepage-pagination li a{
 		cursor: pointer;
 	}
+	#main {
+		margin-top: 50px;
+		font-size: 12px;
+	}
+	#mainLeft {
+	width: 280px;
+	font-size: 16px;
+	float: left;
+	}
+	#mainLeft .text {
+	margin-top: 20px;
+	float: none;
+	margin-bottom: 60px;
+	}
+	h5 {
+	color: #444;
+	text-align: left;
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: -9px;
+	}
+	cufon {
+	display: inline!important;
+	display: inline-block!important;
+	position: relative!important;
+	vertical-align: middle!important;
+	font-size: 1px!important;
+	line-height: 1px!important;
+	}
+	cufon {
+	text-indent: 0!important;
+	}
+
 	</style>
 	<script>
 	  $(document).ready(function(){
@@ -447,42 +498,58 @@
   	    <img src="phones.png" alt="phones">
       </section>
 	    
-	    <section class="page2" data-title = "Personalization">
-	      <div class="page_container">
-            <div class="row">
-	         <div class="col-md-3"><img src="file:///c:/Users/Admin/Desktop/51be79a89c513f800c000001.jpg"></img></div>
-	         <div class="col-md-9">
-	           <div class="row">name</div>
-	           <div class="row">tieu su</div>
-	           <div class="row">khoa hoc tham gia</div>
-	           <div class="row">Su tien bo</div>
-	         </div>
-	        </div>
-	      </div>
+	  <section class="page2" data-title = "Personalization">
+         <div class="page_container_p2 row">
+         <div class="row">
+	         <div class="col-md-6 text-left">
+		          <h3>Bạn băn khoăn về việc dạy và học như thế nào khi mà bạn phải đi làm. bạn không có nhiều thời gian
+			          dể đến các lớp học kiểu truyền thống.VietED với hệ thống trường học online. khóa học online.
+			          Học sinh và giáo viên có thể tương tác với nhau thông qua internet.Hiệu quả,an toàn,chất lượng 
+			          và rất tiết kiêm
+			          ( ảnh nếu có)
+		          </h3>
+	          </div>
+	          <div class="col-md-6 text-left">
+		          <h3>Đừng chần chừ nữa. Hãy đăng ký ngay tài khoản và học tại VietED, Chúng tôi có những khóa học miễn phí để bạn làm quen
+		              và có rất nhiều những khóa học chất lượng đang có trên website
+		              ( ảnh nếu có)
+		          </h3>
+	          </div>
+          </div>
+          <div class="row">
+	            <a class="reload btn" href="https://vieted.vn/course">Browser our courses</a>
+          </div>
+        </div>   
       </section>
 	    
 	    <section class="page3" data-title = "who are we?">
 	      <div class="page_container">
-          <h1>Pretty Neat Eh?</h1>
-          <h2>You can customise the animation timing, the selector or even the animation easing using CSS3. I can't wait to see what you guys will come up with. Don't forget to grab them for free on Github'</h2>
+          <h1>Bạn đã sẵn sàng chưa?</h1>
+          <h2>Đừng để lãng phí thời gian và tiền bạc.Hãy để chúng tôi giúp bạn xây dựng tương lại cho chính bạn. 
+             Hãy tích cực học tập khi bạn còn trẻ.Đừng lãng phí tuổi trẻ của mình
+          </h2>
           <div class="btns">
-  	        <a class="reload btn" href="https://github.com/peachananr/onepage-scroll">Download on Github</a>
+  	        <a class="reload btn" href="https://vieted.vn/course">Browser our courses</a>
   	      </div>
   	    </div>
       </section>
       
       <section class="page4" data-title = "Feedback?">
           <div class="page_container">
-          <h1>Pretty Neat Eh?</h1>
-          <h2>You can customise the animation timing, the selector or even the animation easing using CSS3. I can't wait to see what you guys will come up with. Don't forget to grab them for free on Github'</h2>
+          <h1>Chúng tôi là ai?</h1>
+          <h2>
+            Chúng tôi là VietED, Một công ty cổ phần chuyên về lĩnh vực giáo dục thông minh.
+            Đưa ra các giải pháp giáo dục. Dịch vụ giá trị gia tăng. Call Center
+            Mọi thông tin chi tiết các bạn vui lòng gọi : 19006789 để biết thêm chi tiết
+          </h2>
           <div class="btns">
-            <a class="reload btn" href="https://github.com/peachananr/onepage-scroll">Download on Github</a>
+            <a class="reload btn" href="https://github.com/peachananr/onepage-scroll">Buy a beer for us</a>
           </div>
         </div>
       </section>
     </div>
     <a class="back">Mooc</a>
-    <a href="https://github.com/peachananr/onepage-scroll"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    
   </div>
 </body>
 </html>
